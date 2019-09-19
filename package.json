@@ -1,0 +1,27 @@
+{
+  "name": "koa2-demo",
+  "version": "1.0.0",
+  "description": "test for koa2",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "fs": "0.0.1-security",
+    "gravatar": "^1.8.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-sslify": "^4.0.3",
+    "mongoose": "^5.7.1",
+    "saslprep": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
