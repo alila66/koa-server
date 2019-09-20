@@ -6,7 +6,6 @@ const https = require('https');
 const fs = require('fs');
 const { default: enforceHttps } = require('koa-sslify');
 
-// const port = process.env.PORT || 5000
 const cnnvsRoute = require('./Router/API/CnnvsRoute')
 const usersRoute = require('./Router/API/UsersRoute')
 
@@ -20,18 +19,13 @@ app.use(router.routes())
     .use(router.allowedMethods())
 
 router.get("/", async ctx => {
-    // ctx.body = ctx.request.body
     ctx.body = { msg: 'Welcome to Koa2!' }
 })
 
-// app.listen(port, () => {
-//     console.log(`server start on ${port}`)
-// })
-
 // Force HTTPS using default resolver
 app.use(enforceHttps({
-    port: 8081
-}));
+    port: 8088
+}))
 
 // index page
 app.use(ctx => {
@@ -40,10 +34,10 @@ app.use(ctx => {
 
 // SSL options
 var options = {
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.pem')
+    key: fs.readFileSync('./server.key'),
+    cert: fs.readFileSync('./server.pem')
 }
 
 // start the server
-http.createServer(app.callback()).listen(8080, console.log(`server start on 8080`));
-https.createServer(options, app.callback()).listen(8088);
+// http.createServer(app.callback()).listen(8080, console.log(`server start on 8080`));
+https.createServer(options, app.callback()).listen(8088, '0.0.0.0', console.log(`Now start ssl server on 8088...`));
