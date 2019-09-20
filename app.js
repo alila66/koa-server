@@ -28,9 +28,9 @@ app.use(enforceHttps({
 }))
 
 // index page
-app.use(ctx => {
-    ctx.body = "hello world from " + ctx.request.url;
-});
+// app.use(ctx => {
+//     ctx.body = "hello world from " + ctx.request.url;
+// });
 
 // SSL options
 var options = {
