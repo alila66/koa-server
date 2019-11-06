@@ -14,7 +14,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-sslify": "^4.0.3",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "saslprep": "^1.0.3"
   },
   "devDependencies": {},
