@@ -4,7 +4,7 @@
   "description": "test for koa2",
   "main": "app.js",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "fs": "0.0.1-security",
     "gravatar": "^1.8.0",
     "http": "0.0.0",
